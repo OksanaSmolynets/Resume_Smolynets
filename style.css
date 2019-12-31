@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  z-index: 1;
 }
 
 .info_portret-img {
@@ -25,6 +26,7 @@ body {
   border-bottom: 260px solid #1c7bb6;
   border-left: 40px solid transparent;
   position: absolute;
+  z-index: 1;
 }
 
 .header-info_profile {
@@ -38,6 +40,23 @@ body {
 
 .header-info_text {
   z-index: 1;
+  width: 450px;
+  height: auto;
+  /* background: #1c7bb6;
+  box-shadow: 1px 1px 8px 2px white; */
+  transition: width 2s;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.header-info_text:hover {
+  width: 60%;
+  box-shadow: 5px 5px 12px 8px white;
+  background: #1c7bb6;
+  z-index: 5;
 }
 
 .header-info_social div {
@@ -52,6 +71,7 @@ body {
   position: fixed;
   top: 120px;
   right: 10px;
+  z-index: 2;
 }
 
 .header-info_social div p {
@@ -72,17 +92,78 @@ body {
   box-shadow: 1px 1px 8px 2px white;
 }
 
-.square {
-  width: 450px;
-  height: 240px;
+.square.one,
+.square.two,
+.square.three,
+.square.four,
+.square.five,
+.square.six,
+.square.seven {
+  width: 250px;
+  height: 200px;
   border: 2px solid white;
   background: #1c7bb6;
   box-shadow: 1px 1px 8px 2px white;
   position: absolute;
-  top: 10px;
-  right: 200px;
-  -ms-transform: rotate(12deg);
-  -webkit-transform: rotate(12deg);
-  transform: rotate(12deg);
   opacity: 0.5;
+}
+
+.square.one {
+  -ms-transform: rotate(16deg);
+  -webkit-transform: rotate(16deg);
+  transform: rotate(16deg);
+  right: 0;
+  top: 15px;
+  background: #6eaacf;
+}
+
+.square.two {
+  -ms-transform: rotate(55deg);
+  -webkit-transform: rotate(55deg);
+  transform: rotate(55deg);
+  right: 8%;
+  top: 5px;
+  background: #385d74;
+}
+
+.square.three {
+  -ms-transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  right: 20%;
+  background: #4284ad;
+}
+
+.square.four {
+  transform: translate(-25%, 10%) rotate(5deg);
+  right: 30%;
+  background: #385d74;
+}
+
+.square.five {
+  -ms-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  transform: rotate(160deg);
+  right: 48%;
+  top: 25px;
+  background: #3b88b8;
+}
+
+.square.six {
+  -ms-transform: rotate(130deg);
+  -webkit-transform: rotate(130deg);
+  transform: rotate(130deg);
+  right: 55%;
+  top: 5px;
+  background: #385d74;
+}
+
+.square.seven {
+  -ms-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  transform: rotate(160deg);
+  right: 64%;
+  top: 25px;
+  z-index: 2;
+  background: #6eaacf;
 }
